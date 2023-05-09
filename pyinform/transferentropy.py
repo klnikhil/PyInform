@@ -164,8 +164,8 @@ def transfer_entropy(source, target, k, condition=None, local=False):
     :raises ValueError: if either time series is greater than 2-D
     :raises InformError: if an error occurs within the ``inform`` C call
     """
-    ys = np.ascontiguousarray(source, np.int32)
-    xs = np.ascontiguousarray(target, np.int32)
+    xs = np.ascontiguousarray(source, np.int32)
+    ys = np.ascontiguousarray(target, np.int32)
     cs = np.ascontiguousarray(condition, np.int32) if condition is not None else None
 
     if xs.shape != ys.shape:
